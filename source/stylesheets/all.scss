@@ -2,6 +2,107 @@
 
 @import "bourbon";
 @import "layout";
+@import "flat-button";
+
+
+
+
+$primary: #293375;
 
 body {
+  background-color: $primary;
+  color: #efefef;
+}
+
+.thumbnails {
+  li {
+    display:inline;
+  }
+  img {
+    max-height: 50px;
+  }
+}
+
+
+.row {
+  margin-left: auto;
+  margin-right: auto;
+  width: 900px;
+}
+
+#logo {
+  text-align: center;
+  .logo-arlington {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 51px;
+    font-weight: 100;
+    margin-top: -15px;
+    color: white;
+  }
+  .logo-ruby {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 82px;
+    font-weight: 600;
+    margin-top: 5px;
+    text-transform: uppercase;
+    color: white;
+  }
+  img.logo {
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    height: 220px;
+  }
+}
+
+#hero {
+  h1,h2 {
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  h1 {
+    text-align: left;
+    font-weight: 400;
+    font-size: 60px;
+    @include transform( rotate(5deg) skew(9deg, 0deg) );
+
+  }
+  h2 {
+    text-align: right;
+    font-size: 30px;
+    font-weight: 100;
+    @include transform( rotate(5deg) skew(9deg, 0deg) );
+  }
+
+  margin: 0;
+  padding:0;
+  background-color: #293375;
+  color: #efefef;
+}
+#events {
+  ul
+  {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    background-color: lighten($primary, 3%);
+    padding: 10px;
+    border-radius: 4px;
+  }
+  .rsvp {
+    @include clearfix;
+    a {
+      float: right;
+      @include flat-button(#EB2227);
+    }
+  }
+}
+
+a {
+  color: #FFF77D;
+}
+h1 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
 }
