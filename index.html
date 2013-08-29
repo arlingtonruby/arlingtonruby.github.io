@@ -1,0 +1,84 @@
+---
+layout: default
+---
+<div id="hero">
+  <div class="row">
+    <h1>
+      We are a fortnightly meetup that sometimes talks about Ruby
+    </h1>
+    <h2>
+      Normally topics are Ruby related, but not always. Most of our members write Ruby code, but not all of them. You should come hangout.
+    </h2>
+  </div>
+</div>
+<div id="logo">
+  <div class="row">
+    <img class="logo" src="images/logo.svg" />
+    <div class="logo-arlington">
+      Arlington
+    </div>
+    <div class="logo-ruby">
+      Ruby
+    </div>
+  </div>
+</div>
+<div id="events" ng-controller="EventsController">
+  <div class="row">
+    <h1>
+      <span ng-bind="title"></span>
+    </h1>
+    <ul>
+      <li ng-repeat="event in events">
+        <div class="name">
+          <h2 ng-bind="name"></h2>
+        </div>
+        <div class="venue">
+          Where: <span ng-bind="event.venue.name"></span>
+        </div>
+        <div class="attending">
+          Attending: <span ng-bind="event.yes_rsvp_count"></span>
+        </div>
+        <div class="time">
+          Time: <span ng-bind="formatDate(event.time)"></span>
+        </div>
+        <div class="rsvp">
+          {% raw %}
+          <a href="{{event.event_url}}">RSVP</a>
+          {% endraw %}
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+<div id="about">
+  <div class="row">
+    <h1>
+      Ruby Retrocession
+    </h1>
+    <p>
+      We also host the Ruby Retrocession open space event.
+    </p>
+  </div>
+  <div class="row">
+    <h1>
+      Around the internets
+    </h1>
+    <p>
+      You can find us on twitter <a href="https://twitter.com/arlingtonruby">@arlingtonruby</a>, on IRC in #arlingtonruby on <a href="http://freenode.net/">freenode</a> and on the <a href="github.com/arlingtonruby">github</a>.
+    </p>
+  </div>
+</div>
+<div id="photos" ng-controller="PhotosController">
+  <div class="row">
+    <h1>
+      Photos
+    </h1>
+    <ul class="thumbnails">
+      <li ng-repeat="photo in photos">
+        {% raw %}
+        <a href="{{photo.highres_link}}"><img alt="{{photo.caption}}" src="{{photo.thumb_link}}" /></a>
+        {% endraw %}
+      </li>
+    </ul>
+  </div>
+</div>

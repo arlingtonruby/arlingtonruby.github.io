@@ -1,0 +1,103 @@
+body {
+  background-color: #293375;
+  color: #efefef; }
+
+.thumbnails li {
+  display: inline; }
+.thumbnails img {
+  max-height: 50px; }
+
+.row {
+  margin-left: auto;
+  margin-right: auto;
+  width: 900px; }
+
+#logo {
+  text-align: center; }
+  #logo .logo-arlington {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 51px;
+    font-weight: 100;
+    margin-top: -15px;
+    color: white; }
+  #logo .logo-ruby {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 82px;
+    font-weight: 600;
+    margin-top: 5px;
+    text-transform: uppercase;
+    color: white; }
+  #logo img.logo {
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    height: 220px; }
+
+#hero {
+  margin: 0;
+  padding: 0;
+  background-color: #293375;
+  color: #efefef; }
+  #hero h1, #hero h2 {
+    font-family: 'Josefin Sans', sans-serif; }
+  #hero h1 {
+    text-align: left;
+    font-weight: 400;
+    font-size: 60px;
+    -webkit-transform: rotate(5deg) skew(9deg, 0deg);
+    -moz-transform: rotate(5deg) skew(9deg, 0deg);
+    -ms-transform: rotate(5deg) skew(9deg, 0deg);
+    -o-transform: rotate(5deg) skew(9deg, 0deg);
+    transform: rotate(5deg) skew(9deg, 0deg); }
+  #hero h2 {
+    text-align: right;
+    font-size: 30px;
+    font-weight: 100;
+    -webkit-transform: rotate(5deg) skew(9deg, 0deg);
+    -moz-transform: rotate(5deg) skew(9deg, 0deg);
+    -ms-transform: rotate(5deg) skew(9deg, 0deg);
+    -o-transform: rotate(5deg) skew(9deg, 0deg);
+    transform: rotate(5deg) skew(9deg, 0deg); }
+
+#events ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+#events li {
+  background-color: #2d3880;
+  padding: 10px;
+  border-radius: 4px; }
+#events .rsvp {
+  *zoom: 1; }
+  #events .rsvp:before, #events .rsvp:after {
+    content: " ";
+    display: table; }
+  #events .rsvp:after {
+    clear: both; }
+  #events .rsvp a {
+    float: right;
+    background-clip: padding-box;
+    background: #eb2227;
+    border: 1px solid #eb2227;
+    color: white;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 300;
+    padding: 7px 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 5px;
+    text-shadow: #eb2227 0 0 5px;
+    transition: .5s; }
+    #events .rsvp a i {
+      padding-right: 2px; }
+    #events .rsvp a:hover {
+      color: #fff;
+      background: rgba(235, 34, 39, 0.5); }
+
+a {
+  color: #FFF77D; }
+
+h1 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400; }
