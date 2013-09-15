@@ -1,0 +1,27 @@
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  height: 101%;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+/*  font-family: Arial, Tahoma, sans-serif;*/
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+ul {
+  list-style: none
+}
+
+a {
+  cursor: pointer;
+}

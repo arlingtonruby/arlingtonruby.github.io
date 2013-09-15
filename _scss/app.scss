@@ -1,108 +1,37 @@
 @charset "utf-8";
 
 @import 'bourbon/bourbon';
-@import "layout";
-@import "flat-button";
-
-
-
-
-$primary: #293375;
+@import "normalize";
+/*@import "layout";*/
+@import "additional_reset";
+@import "onepcssgrid";
+@import "utility";
 
 body {
-  background-color: $primary;
-  color: #efefef;
+  font-family: 'Lato', sans-serif;
+  color: #fff;
 }
 
-.thumbnails {
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+}
+
+.nav-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  padding-top: 8px;
+  background-color: #e74c3c;
+  font-size: 1.25em;
+/*  background-color: #3fafff;*/
   li {
-    display:inline;
+    display: inline-block;
+    margin: 0 40px;
   }
-  img {
-    max-height: 50px;
+  .nav-top-logo {
+    margin: 10px 0 10px 40px;
+    font-size: inherit;
   }
-}
-
-
-.row {
-  margin-left: auto;
-  margin-right: auto;
-  width: 900px;
-}
-
-#logo {
-  text-align: center;
-  .logo-arlington {
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 51px;
-    font-weight: 100;
-    margin-top: -15px;
-    color: white;
-  }
-  .logo-ruby {
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 82px;
-    font-weight: 600;
-    margin-top: 5px;
-    text-transform: uppercase;
-    color: white;
-  }
-  img.logo {
-    margin-left: auto;
-    margin-right: auto;
-    width: 300px;
-    height: 220px;
-  }
-}
-
-#hero {
-  h1,h2 {
-    font-family: 'Josefin Sans', sans-serif;
-  }
-  h1 {
-    text-align: left;
-    font-weight: 400;
-    font-size: 60px;
-    @include transform( rotate(5deg) skew(9deg, 0deg) );
-
-  }
-  h2 {
-    text-align: right;
-    font-size: 30px;
-    font-weight: 100;
-    @include transform( rotate(5deg) skew(9deg, 0deg) );
-  }
-
-  margin: 0;
-  padding:0;
-  background-color: #293375;
-  color: #efefef;
-}
-#events {
-  ul
-  {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  li {
-    background-color: lighten($primary, 3%);
-    padding: 10px;
-    border-radius: 4px;
-  }
-  .rsvp {
-    @include clearfix;
-    a {
-      float: right;
-      @include flat-button(#EB2227);
-    }
-  }
-}
-
-a {
-  color: #FFF77D;
-}
-h1 {
-  font-family: 'Josefin Sans', sans-serif;
-  font-weight: 400;
 }
