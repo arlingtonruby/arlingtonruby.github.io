@@ -27,3 +27,12 @@ this.app.controller('PhotosController', function($scope, $http) {
     return $scope.photos = data.results;
   });
 });
+
+this.app.controller('MembersController', function($scope, $http) {
+  var members_url;
+  $scope.members = [];
+  members_url = "http://api.meetup.com/2/members/?key=6468958671031515c1e1e284e4413&group_id=1815773&format=json&callback=JSON_CALLBACK";
+  return $http.jsonp(members_url).success(function(data) {
+    return $scope.members = data.results;
+  });
+});

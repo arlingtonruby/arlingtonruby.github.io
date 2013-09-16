@@ -19,7 +19,14 @@
 
 @app.controller 'PhotosController', ($scope, $http) ->
   $scope.photos = []
-  photos_url="http://api.meetup.com/2/photos/?key=6468958671031515c1e1e284e4413&group_id=1815773&order=time&desc=True&callback=JSON_CALLBACK&offset=0&format=json&page=200&fields="
+  photos_url = "http://api.meetup.com/2/photos/?key=6468958671031515c1e1e284e4413&group_id=1815773&order=time&desc=True&callback=JSON_CALLBACK&offset=0&format=json&page=200&fields="
   $http.jsonp(photos_url)
     .success (data) ->
       $scope.photos = data.results
+
+@app.controller 'MembersController', ($scope, $http) ->
+  $scope.members = []
+  members_url="http://api.meetup.com/2/members/?key=6468958671031515c1e1e284e4413&group_id=1815773&format=json&callback=JSON_CALLBACK"
+  $http.jsonp(members_url)
+    .success (data) ->
+      $scope.members = data.results
