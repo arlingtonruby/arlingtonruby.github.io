@@ -6,14 +6,18 @@
 @import "additional_reset";
 @import "onepcssgrid";
 @import "utility";
+@import "variables";
 
 body {
   font-family: 'Lato', sans-serif;
-  color: #fff;
+  color: #6d6d6d;
+  background-color: $white;
+  padding: 100px 40px 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
+  color: $color-primary;
 }
 
 .nav-top {
@@ -22,10 +26,8 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   right: 0;
   height: 80px;
-  padding-top: 8px;
-  background-color: #e74c3c;
+  background-color: $color-primary;
   font-size: 1.25em;
-/*  background-color: #3fafff;*/
   li {
     display: inline-block;
     margin: 0 40px;
@@ -33,10 +35,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-top-logo {
-  margin: 10px 0 10px 40px;
+  margin: 15px 0 0 40px;
   font-size: inherit;
+}
+
+.nav-top-pagelinks {
+  margin-top: 28px;
 }
 
 .nav-top-link {
   text-decoration: none;
+  color: $white;
+}
+
+section[role="main"] {
+  margin: 0 auto;
 }

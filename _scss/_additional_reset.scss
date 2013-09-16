@@ -22,6 +22,11 @@ ul {
   list-style: none
 }
 
+ul, ol, li {
+  margin: 0;
+  padding: 0;
+}
+
 a {
   color: inherit;
   cursor: pointer;

@@ -26,7 +26,7 @@
     </a>
   </h1>
 
-  <ul class="pull-right">
+  <ul class="nav-top-pagelinks pull-right">
     <li>
       <a title="Link to upcoming events" class="nav-top-link" href="#events">
         <i class="icon-calendar"></i>
@@ -48,36 +48,67 @@
   </ul>
 </nav>
 
+<section role="main onepcssgrid-1000">
+  <article id="about">
+    <header>
+      <h1>Arlington Ruby</h1>
+    </header>
+    <section>
+      We are a fortnightly meetup that sometimes talks about
+      <a title="Link to Official Ruby Site" href="https://www.ruby-lang.org">Ruby</a>.
+      <br />
+      Normally, topics are Ruby related, but not always.
+      <br />
+      Most of our members write Ruby code, but not all of them. You should come hangout.
+    </section>
+  </article>
 
-<!-- <div id="events" ng-controller="EventsController">
-  <div class="row">
-    <h1>
-      <span ng-bind="title"></span>
-    </h1>
-    <ul>
-      <li ng-repeat="event in events">
-        <div class="name">
-          <h2 ng-bind="name"></h2>
-        </div>
-        <div class="venue">
-          Where: <span ng-bind="event.venue.name"></span>
-        </div>
-        <div class="attending">
-          Attending: <span ng-bind="event.yes_rsvp_count"></span>
-        </div>
-        <div class="time">
-          Time: <span ng-bind="formatDate(event.time)"></span>
-        </div>
-        <div class="rsvp">
-          
-          <a href="{{event.event_url}}">RSVP</a>
-          
-        </div>
-      </li>
-    </ul>
-  </div>
-</div> -->
+  <article id="events" ng-controller="EventsController">
+    <header>
+      <h1 ng-bind="title"></h1>
+    </header>
+    <section>
+      <ul>
+        <li ng-repeat="event in events">
+          <div class="name">
+            <h2 ng-bind="name"></h2>
+          </div>
+          <div class="venue">
+            Where: <span ng-bind="event.venue.name"></span>
+          </div>
+          <div class="attending">
+            Attending: <span ng-bind="event.yes_rsvp_count"></span>
+          </div>
+          <div class="time">
+            Time: <span ng-bind="formatDate(event.time)"></span>
+          </div>
+          <div class="rsvp">
+            
+            <a href="{{event.event_url}}">RSVP</a>
+            
+          </div>
+        </li>
+      </ul>
+    </section>
+  </article>
 
+  <article id="community">
+    <header>
+      <h1>Community</h1>
+    </header>
+    <section>
+    </section>
+  </article>
+
+  <article id="knowledge">
+    <header>
+      <h1>Knowledge Share</h1>
+    </header>
+    <section>
+    </section>
+  </article>
+
+</section>
     <script src="/js/angular.js" type="text/javascript"></script>
     <script src="/js/date.js" type="text/javascript"></script>
     <script src="/js/app.js" type="text/javascript"></script>
