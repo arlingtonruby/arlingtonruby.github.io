@@ -338,7 +338,8 @@ ul, ol, li {
 
 a {
   color: inherit;
-  cursor: pointer; }
+  cursor: pointer;
+  text-decoration: none; }
 
 /* *********************************************************************************************************************
 	One% CSS Grid - 12 Columns Fluid CSS Grid System
@@ -521,18 +522,20 @@ a {
 .nav-top-pagelinks {
   margin-top: 28px; }
 
-.nav-top-link {
+.nav-link {
   text-decoration: none;
   color: white; }
 
 body {
   font-family: 'Lato', sans-serif;
   color: #6d6d6d;
-  background-color: white;
-  padding: 0 40px; }
+  background-color: white; }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
+  color: #e74c3c; }
+
+a {
   color: #e74c3c; }
 
 .main {
@@ -549,3 +552,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .main-content {
   padding-left: 20px; }
+
+footer {
+  padding: 60px 0 100px; }
