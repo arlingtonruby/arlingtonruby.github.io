@@ -96,6 +96,7 @@ layout: default
       <h1>Ruby Retrocession</h1>
     </header>
     <section class="main-content">
+      We also host the Ruby Retrocession open space event.
     </section>
   </article>
 
@@ -105,6 +106,21 @@ layout: default
     </header>
     <section class="main-content">
     </section>
+  </article>
+
+  <article class="main-photos" ng-controller="PhotosController">
+    <header>
+      <h1>Photos</h1>
+    </header>
+    <ul>
+      <li class="inline-item" ng-repeat="photo in photos">
+        {% raw %}
+        <a href="{{photo.highres_link}}">
+          <img alt="{{photo.caption}}" title="{{photo.caption}}" src="{{photo.thumb_link}}" />
+        </a>
+        {% endraw %}
+      </li>
+    </ul>
   </article>
 
 </section>
@@ -119,7 +135,7 @@ layout: default
     freenode
   </a>
   and on the
-  <a title="Link to Arlington Ruby on GitHub" href="http://arlingtonruby.github.io/github.com/arlingtonruby" target="_new">
+  <a title="Link to Arlington Ruby on GitHub" href="https://github.com/arlingtonruby" target="_new">
     github
   </a>
   .

@@ -501,7 +501,8 @@ a {
   position: relative; }
 
 .nav-top, .nav-top-inner {
-  height: 80px; }
+  height: 80px;
+  z-index: 1; }
 
 .nav-top-inner {
   position: fixed;
@@ -551,6 +552,9 @@ a {
 
 .main-events li {
   margin-bottom: 20px; }
+
+.main-photos li {
+  margin: 20px; }
 
 .main-content {
   padding-left: 20px; }
