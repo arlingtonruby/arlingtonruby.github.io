@@ -61,16 +61,19 @@ layout: default
       <ul>
         <li ng-repeat="event in events">
           <div>
-            Where:
+            <h3>
+              <span ng-bind="event.name"></span>
+            </h3>
+          </div>
+          <div>
+            <span ng-bind="formatDate(event.time)"></span>
+          </div>
+          <div>
             <span ng-bind="event.venue.name"></span>
           </div>
           <div>
             Attending:
             <span ng-bind="event.yes_rsvp_count"></span>
-          </div>
-          <div>
-            Time:
-            <span ng-bind="formatDate(event.time)"></span>
           </div>
           <div>
             {% raw %}
