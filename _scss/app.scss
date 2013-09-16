@@ -2,17 +2,19 @@
 
 @import 'bourbon/bourbon';
 @import "normalize";
-/*@import "layout";*/
+@import "layout";
 @import "additional_reset";
 @import "onepcssgrid";
 @import "utility";
 @import "variables";
 
+@import "nav";
+
 body {
   font-family: 'Lato', sans-serif;
   color: #6d6d6d;
   background-color: $white;
-  padding: 100px 40px 0;
+  padding: 0 40px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -20,34 +22,10 @@ h1, h2, h3, h4, h5, h6 {
   color: $color-primary;
 }
 
-.nav-top {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 80px;
-  background-color: $color-primary;
-  font-size: 1.25em;
-  li {
-    display: inline-block;
-    margin: 0 40px;
-  }
-}
-
-.nav-top-logo {
-  margin: 15px 0 0 40px;
-  font-size: inherit;
-}
-
-.nav-top-pagelinks {
-  margin-top: 28px;
-}
-
-.nav-top-link {
-  text-decoration: none;
-  color: $white;
-}
-
-section[role="main"] {
+.main {
   margin: 0 auto;
+}
+
+.main-content {
+  padding-left: 20px;
 }
