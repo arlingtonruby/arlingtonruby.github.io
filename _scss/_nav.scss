@@ -1,0 +1,33 @@
+.nav-top, .nav-top-inner {
+  height: 80px;
+  z-index: 1;
+}
+
+.nav-top-inner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: $color-primary;
+  font-size: 1.25em;
+  overflow: hidden;
+  li {
+    display: inline-block;
+    margin: 0 40px;
+  }
+}
+
+.nav-top-logo {
+  margin-top: 15px;
+  font-size: inherit;
+}
+
+.nav-top-pagelinks {
+  margin-top: 28px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: $white;
+}
+
