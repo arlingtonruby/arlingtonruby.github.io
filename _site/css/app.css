@@ -334,6 +334,7 @@ ul {
   list-style: none; }
 
 a {
+  color: inherit;
   cursor: pointer; }
 
 /* *********************************************************************************************************************
@@ -515,6 +516,10 @@ h1, h2, h3, h4, h5, h6 {
   .nav-top li {
     display: inline-block;
     margin: 0 40px; }
-  .nav-top .nav-top-logo {
-    margin: 10px 0 10px 40px;
-    font-size: inherit; }
+
+.nav-top-logo {
+  margin: 10px 0 10px 40px;
+  font-size: inherit; }
+
+.nav-top-link {
+  text-decoration: none; }
