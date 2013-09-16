@@ -1,5 +1,4 @@
 .nav-top, .nav-top-inner {
-  height: 80px;
   z-index: 1;
 }
 
@@ -13,7 +12,7 @@
   overflow: hidden;
   li {
     display: inline-block;
-    margin: 0 40px;
+    margin: 0 20px;
   }
 }
 
@@ -31,3 +30,24 @@
   color: $white;
 }
 
+
+@media (max-width: 940px) {
+  .nav-top-inner {
+    li {
+      margin: 0 10px;
+    }
+  }
+}
+@media (max-width: 750px) {
+  .nav-top {
+      font-size: 12px;
+  }
+  .nav-top-pagelinks {
+    margin: 16px 0;
+  }
+  .nav-top-logo {
+    img {
+      height: 20px;
+    }
+  }
+}
