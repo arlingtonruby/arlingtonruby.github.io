@@ -508,7 +508,8 @@ a {
   left: 0;
   right: 0;
   background-color: #e74c3c;
-  font-size: 1.25em; }
+  font-size: 1.25em;
+  overflow: hidden; }
   .nav-top-inner li {
     display: inline-block;
     margin: 0 40px; }
@@ -536,6 +537,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .main {
   margin: 0 auto; }
+
+.main-events li {
+  margin-bottom: 20px; }
 
 .main-content {
   padding-left: 20px; }

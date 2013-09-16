@@ -67,26 +67,26 @@
     </section>
   </article>
 
-  <article id="events" ng-controller="EventsController">
+  <article id="events" class="main-events" ng-controller="EventsController">
     <header>
       <h1 ng-bind="title"></h1>
     </header>
     <section class="main-content">
       <ul>
         <li ng-repeat="event in events">
-          <div class="name">
-            <h2 ng-bind="name"></h2>
+          <div>
+            Where:
+            <span ng-bind="event.venue.name"></span>
           </div>
-          <div class="venue">
-            Where: <span ng-bind="event.venue.name"></span>
+          <div>
+            Attending:
+            <span ng-bind="event.yes_rsvp_count"></span>
           </div>
-          <div class="attending">
-            Attending: <span ng-bind="event.yes_rsvp_count"></span>
+          <div>
+            Time:
+            <span ng-bind="formatDate(event.time)"></span>
           </div>
-          <div class="time">
-            Time: <span ng-bind="formatDate(event.time)"></span>
-          </div>
-          <div class="rsvp">
+          <div>
             
             <a href="{{event.event_url}}">RSVP</a>
             
