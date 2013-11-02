@@ -604,6 +604,9 @@ a {
 
 .main-content {
   padding-left: 20px; }
+  .main-content ul.bullets {
+    padding-left: 40px;
+    list-style: circle; }
 
 footer {
   padding: 60px 0 100px; }

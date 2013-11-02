@@ -58,6 +58,7 @@ a {
   }
 }
 
+
 .thumbnail-wrapper {
   @include box-shadow(0 0 0 1px #dfdfdf);
   @include border-radius(50%);
@@ -80,6 +81,10 @@ a {
 
 .main-content {
   padding-left: 20px;
+  ul.bullets {
+    padding-left:40px;
+    list-style: circle;
+  }
 }
 
 footer {
