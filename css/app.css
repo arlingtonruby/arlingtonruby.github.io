@@ -1,5 +1,5 @@
-@charset "UTF-8";
-/*! normalize.css v2.0.1 | MIT License | git.io/normalize */
+@charset "utf-8";
+/* normalize.css v2.0.1 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
    ========================================================================== */
@@ -610,3 +610,6 @@ a {
 
 footer {
   padding: 60px 0 100px; }
+
+.main {
+  padding-top: 145px; }
