@@ -42,7 +42,7 @@ window.onload = function(){
       var template = $('#meetup-card').html();
       Mustache.parse(template);   // optional, speeds up future uses
       var rendered = Mustache.render(template, {"event": event});
-      $('#'+componentConfiguration.id).map(append(rendered));
+      $('#'+componentConfiguration.id).append(rendered);
     };
 
     var EventPresenter = function(event) {
