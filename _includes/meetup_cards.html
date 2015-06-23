@@ -28,7 +28,7 @@
     window.onload = function(){
         var configuration = {
             "maxEvents": 5,
-            "url": "https://api.meetup.com/2/events?callback=JSON_CALLBACK&offset=0&format=json&limited_events=False&group_urlname=techcorridorio&page=200&fields=&order=time&desc=false&status=upcoming&sig_id=168857872&sig=e659cc6038d27adf6eae600a44905c69196c77df"
+            "url": "http://api.meetup.com/2/events/?key=6468958671031515c1e1e284e4413&group_id=1815773&status=upcoming&order=time&limited_events=false&desc=false&callback=JSON_CALLBACK&offset=0&format=json&page=200&fields="
         }
         var meetup = new Meetup(configuration.url).getEvents(function(data) {
             $.each(data.results, function(i, event) {
