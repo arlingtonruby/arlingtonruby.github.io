@@ -1,7 +1,3 @@
-<div id="meetup-events">
-    <!-- Generating events below -->
-</div>
-
 {% raw  %}
 <script id="meetup-card" type="x-tmpl-mustache">
     <div class="panel panel-default">
@@ -22,58 +18,62 @@
 {% endraw  %}
 
 <script type="text/javascript">
-    //assume Mustache is loaded
-    //assume Meetup is loaded
+  //assume Mustache is loaded
+  //assume Meetup is loaded
 
-    window.onload = function(){
-        var configuration = {
-            "maxEvents": 5,
-            "url": "http://api.meetup.com/2/events/?key=6468958671031515c1e1e284e4413&group_id=1815773&status=upcoming&order=time&limited_events=false&desc=false&callback=JSON_CALLBACK&offset=0&format=json&page=200&fields="
+window.onload = function(){
+  $('*[data-component="meetup-card-collection"]').each(function(){
+    var componentConfiguration = {
+      "maxEvents": $(this).data("meetup-card-max-return"),
+      "id": this.id,
+      "url": $(this).data("meetup-card-url")
+    };
+
+    var meetup = new Meetup(componentConfiguration.url).getEvents(function(data) {
+      $.each(data.results, function(i, event) {
+        if (i < componentConfiguration.maxEvents) {
+          eventPresenter = EventPresenter(event);
+          createEventCard(eventPresenter);
         }
-        var meetup = new Meetup(configuration.url).getEvents(function(data) {
-            $.each(data.results, function(i, event) {
-                if (i < configuration.maxEvents) {
-                    eventPresenter = EventPresenter(event);
-                    createEventCard(eventPresenter);
-                }
-            })
-        });
+      })
+    });
 
-        var createEventCard = function (event) {
-            var template = $('#meetup-card').html();
-            Mustache.parse(template);   // optional, speeds up future uses
-            var rendered = Mustache.render(template, {"event": event});
-            $('#meetup-events').append(rendered);
-        };
+    var createEventCard = function (event) {
+      var template = $('#meetup-card').html();
+      Mustache.parse(template);   // optional, speeds up future uses
+      var rendered = Mustache.render(template, {"event": event});
+      $('#'+componentConfiguration.id).map(append(rendered));
+    };
 
-        var EventPresenter = function(event) {
-            var formatVenueLink = function(venue) {
-                var formattedVenue = "http://maps.google.com/?q=" + encodeURI(venue.address_1) + '+' + encodeURI(venue.city);
-                return formattedVenue
-            };
-            var formatDate = function(date) {
-                // Pretty print the event date
-                var day = [ "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-                var months = [
-                    "January", "February", "March", "April",
-                    "May", "June", "July", "August",
-                    "September", "October", "November", "December"
-                ];
+    var EventPresenter = function(event) {
+      var formatVenueLink = function(venue) {
+        var formattedVenue = "http://maps.google.com/?q=" + encodeURI(venue.address_1) + '+' + encodeURI(venue.city);
+        return formattedVenue
+      };
+      var formatDate = function(date) {
+        // Pretty print the event date
+        var day = [ "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        var months = [
+          "January", "February", "March", "April",
+          "May", "June", "July", "August",
+          "September", "October", "November", "December"
+        ];
 
-                return day[date.getDay()]  + ', '
-                + months[date.getMonth()] + ' '
-                + date.getDate() + ', '
-                + date.getFullYear()
-                + ' at '
-                + (date.getHours() % 12) + ':'
-                + (date.getMinutes() < 10 ? '0'+date.getMinutes() : date.getMinutes())
-                + ' '
-                + (date.getHours() < 12 ? 'AM' : 'PM');
-            }
+        return day[date.getDay()]  + ', '
+        + months[date.getMonth()] + ' '
+        + date.getDate() + ', '
+        + date.getFullYear()
+        + ' at '
+        + (date.getHours() % 12) + ':'
+        + (date.getMinutes() < 10 ? '0'+date.getMinutes() : date.getMinutes())
+        + ' '
+        + (date.getHours() < 12 ? 'AM' : 'PM');
+      };
 
-            event.venueLink = formatVenueLink(event.venue);
-            event.formattedDate = formatDate(new Date(event.time));
-            return event;
-        }
+      event.venueLink = formatVenueLink(event.venue);
+      event.formattedDate = formatDate(new Date(event.time));
+      return event;
     }
+  })
+};
 </script>
