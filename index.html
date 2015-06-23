@@ -38,9 +38,20 @@ layout: default
 </nav>
 
 <section class="main onepcssgrid-1200">
+
   {% include about.html %}
-  {% include meetup_cards.html %}
+
+  <article id="events" class="main-events">
+    <header>
+      <h1>Meetup Events</h1>
+    </header>
+    <section class="main-content">
+      {% include meetup_cards.html %}
+    </section>
+  </article>
+
   {% include mentorship.html %}
+
 </section>
 
 {% include footer.html %}
