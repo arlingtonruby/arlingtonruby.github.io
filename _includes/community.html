@@ -1,0 +1,20 @@
+<article id="community" ng-controller="MembersController">
+  <header>
+    <h1>Community</h1>
+  </header>
+  <section class="main-content">
+    <ul>
+      <li class="inline-item thumbnail-wrapper" ng-repeat="member in members">
+      {% raw %}
+      <a title="Link to MeetUp page for {{member.name}}" href="{{member.link}}">
+        <img src="{{member.photo.photo_link}}"
+        class="thumbnail"
+        alt="Link to photo for {{member.name}}"
+        title="Link to photo for {{member.name}}" />
+      </a>
+      {% endraw %}
+      </li>
+    </ul>
+  </section>
+</article>
+

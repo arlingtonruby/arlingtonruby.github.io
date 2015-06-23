@@ -38,139 +38,15 @@ layout: default
 </nav>
 
 <section class="main onepcssgrid-1200">
-  <article id="retrocession">
-    <header>
-      <h1>RetroRuby Unconf</h1>
-    </header>
-    <section class="main-content">
+  {% include retrocession.html %}
 
-      <p><a title="RetroRuby Website" href="http://retroruby.org/">RetroRuby</a>
-      is coming up April 4th, 2015. You won't want to miss it, so <a
-      title="RetroRuby Registration"
-      href="https://retroruby.busyconf.com/bookings/new">register today</a>!
-      Coffee, lunch, and t-shirt included.</p>
-      <p>This Retrocession <a title="Unconference at Wikipedia" href="http://en.wikipedia.org/wiki/Unconference">
-      Unconference</a> features talks suggested by and delivered by
-      <strong>you</strong>, as well as a guided "newbie" track, so be sure to
-      tell your friends.</p>
-      <p>If you're new to Rails or ruby, welcome! We hope to see you soon!</p>
-    </section>
-  </article>
+  {% include about.html %}
+  {% include meetup_cards.html %}
 
-  <article id="about">
-    <header>
-      <h1>Arlington Ruby</h1>
-    </header>
-    <section class="main-content">
-      <p>We are a fortnightly meetup that sometimes talks about
-      <a title="Link to Official Ruby Site" href="https://www.ruby-lang.org">
-      Ruby</a>. Topics are usually Ruby-related, but not always. Most of our
-      members write Ruby code, but not all of them.</p>
-      <p>You should come hangout.</p>
-      <p>You can usually find us online in <a href="irc://irc.freenode.net:6667/#arlingtonruby">
-      freenode/#arlingtonruby</a>. We also like to hang out at <a href="http://northsidesocialarlington.com/" title="Northside Social Website">
-      Northside Social</a>. Often, we're in both places at the same time.
-    </section>
-  </article>
+  {% include community.html %}
 
-  <article id="events" class="main-events" ng-controller="EventsController">
-    <header>
-      <h1 ng-bind="title"></h1>
-    </header>
-    <section class="main-content">
-      <ul>
-        <li ng-repeat="event in events">
-        <div>
-          <h3>
-            <span ng-bind="event.name"></span>
-          </h3>
-        </div>
-        <div>
-          <span ng-bind="formatDate(event.time)"></span>
-        </div>
-        <div>
-          <span ng-bind="event.venue.name"></span>
-        </div>
-        <div>
-          Attending:
-          <span ng-bind="event.yes_rsvp_count"></span>
-        </div>
-        <div>
-          {% raw %}
-          <a href="{{event.event_url}}">RSVP</a>
-          {% endraw %}
-        </div>
-        </li>
-      </ul>
-    </section>
-  </article>
-
-  <article id="community" ng-controller="MembersController">
-    <header>
-      <h1>Community</h1>
-    </header>
-    <section class="main-content">
-      <ul>
-        <li class="inline-item thumbnail-wrapper" ng-repeat="member in members">
-        {% raw %}
-        <a title="Link to MeetUp page for {{member.name}}" href="{{member.link}}">
-          <img src="{{member.photo.photo_link}}"
-          class="thumbnail"
-          alt="Link to photo for {{member.name}}"
-          title="Link to photo for {{member.name}}" />
-        </a>
-        {% endraw %}
-        </li>
-      </ul>
-    </section>
-  </article>
-
-  <article id="mentorship">
-    <header>
-      <h1>Mentorship</h1>
-    </header>
-    <section class="main-content">
-      <p>Arlington Ruby wants you and the community to grow so we've built a program to do just that.</p>
-      <p> Our mentorship program is invite only. That means you have to know someone to get in. More precisely someone has to know you, which means you need to be involved in the community.</p>
-      <h2>Here's how it works:</h2>
-      <p>
-      For 6 months the expectations are:
-      <ul class='bullets'>
-        <li>The mentor and mentee will meet at least once weekly</li>
-        <li>The mentor and mentee will meet in person at least once monthly</li>
-      </ul>
-      <p>When 6 months is over, the mentee is expected to:</p>
-      <ul class='bullets'>
-        <li>Give a full presentation at a local relevant group (Perhaps at Arlington Ruby)</li>
-        <li>Find another person whom you think will benefit from the program and suggest a mentorship</li>
-        <li>For 3 months following, be a greeter at Arlington Ruby meetings by finding new people and introducing them to others</li>
-      </ul>
-      <p>Your full commitment is for 9 months although you may continue in a new mentorship with another mentor after your 6 month commitment.</p>
-
-      <p>This is designed to help grow your skills and grow the community. It is designed for developers at any level. What you do and learn in the course of your mentorship is up to <em>you</em> so take advantage of it.</p>
-      <p>Mentorship relationships are suggested by mentors for other mentors/mentees to start. For example, if Allison thinks Brad could use a mentor, it's her job to suggest one but she can't do it herself. This helps us ensure that the community stay connected and get to know each other.</p>
-    </section>
-  </article>
-
-  <article class="main-photos" ng-controller="PhotosController">
-    <header>
-      <h1>Photos</h1>
-    </header>
-    <ul>
-      <li class="inline-item" ng-repeat="photo in photos">
-      {% raw %}
-      <a href="{{photo.highres_link}}">
-        <img alt="{{photo.caption}}" title="{{photo.caption}}" src="{{photo.thumb_link}}" />
-      </a>
-      {% endraw %}
-      </li>
-    </ul>
-  </article>
-
+  {% include mentorship.html %}
+  {% include photos.html %}
 </section>
 
-<footer class="align-center">
-  You can find us on twitter
-  <a title="Link to Arlington Ruby on Twitter" href="http://www.twitter.com/arlingtonruby" target="_new">@arlingtonruby</a>, on IRC in #arlingtonruby via
-  <a title="Link to Freenode" href="http://freenode.net/" target="_new">freenode</a> and on the <a title="Link to Arlington Ruby on GitHub" href="https://github.com/arlingtonruby" target="_new">github</a>.
-</footer>
+{% include footer.html %}
