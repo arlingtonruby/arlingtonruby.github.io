@@ -1,0 +1,15 @@
+<article class="main-photos" ng-controller="PhotosController">
+  <header>
+    <h1>Photos</h1>
+  </header>
+  <ul>
+    <li class="inline-item" ng-repeat="photo in photos">
+    {% raw %}
+    <a href="{{photo.highres_link}}">
+      <img alt="{{photo.caption}}" title="{{photo.caption}}" src="{{photo.thumb_link}}" />
+    </a>
+    {% endraw %}
+    </li>
+  </ul>
+</article>
+

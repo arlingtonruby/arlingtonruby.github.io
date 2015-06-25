@@ -3,7 +3,6 @@ task :default do
   pids = [
     spawn("jekyll serve --watch"), # put `auto: true` in your _config.yml
     spawn("scss --watch _scss:css"),
-    spawn("coffee -b -w -o js -c _coffee/*.coffee")
   ]
 
   trap "INT" do
