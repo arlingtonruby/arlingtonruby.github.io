@@ -29,16 +29,29 @@ layout: default
     </div>
   </div>
 
-  <article id="events" class="main-events">
-    <header>
-      <h1>Upcoming Events</h1>
-    </header>
-    <section class="main-content">
-      <div id="arlington-meetup-card-collection" data-component="meetup-card-collection" data-meetup-card-max-return="5" data-meetup-card-url="http://api.meetup.com/2/events/?key=6468958671031515c1e1e284e4413&group_id=1815773&status=upcoming&order=time&limited_events=false&desc=false&callback=JSON_CALLBACK&offset=0&format=json&page=200&fields="></div>
-    </section>
-  </article>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <article id="events" class="main-events">
+          <header>
+            <h1>Upcoming Events</h1>
+          </header>
+          <section class="main-content">
+            <div id="arlington-meetup-card-collection" data-component="meetup-card-collection" data-meetup-card-max-return="3" data-meetup-card-url="http://api.meetup.com/2/events/?key=6468958671031515c1e1e284e4413&group_id=1815773&status=upcoming&order=time&limited_events=false&desc=false&callback=JSON_CALLBACK&offset=0&format=json&page=200&fields="></div>
+          </section>
+        </article>
+      </div>
+      <div class="col-md-4">
+        {% include twitter_widget.html %}
+      </div>
+    </div>
 
-  {% include mentorship.html %}
+    <div class="row">
+      <div class="col-md-12">
+        {% include mentorship.html %}
+      </div>
+    </div>
+  </div>
 
 </section>
 
